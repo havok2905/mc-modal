@@ -57,22 +57,12 @@ For more information on using ember-cli, visit [http://ember-cli.com/](http://em
 
 ```javascript
 import Ember from 'ember';
+import McModalToggle from 'mc-modal/mixins/mc-modal-toggle';
 
-export default Ember.Controller.extend({
+export default Ember.Controller.extend(McModalToggle, {
   firstModalDisplayable:  false,
-  secondModalDisplayable: false,
-
-  actions: {
-    enable(id) {
-      this.set(`${id}ModalDisplayable`, true);
-    },
-
-    disable(id) {
-      this.set(`${id}ModalDisplayable`, false);
-    }
-  }
+  secondModalDisplayable: false
 });
-
 ```
 
 **./app/templates/index.hbs**
@@ -83,6 +73,7 @@ export default Ember.Controller.extend({
             footerText='MC MODAL FOOTER'}}
 
   <p>Stuff</p>
+  <button {{ action 'disable' 'first' }}>Close</button>
 
 {{/mc-modal}}
 
@@ -92,6 +83,7 @@ export default Ember.Controller.extend({
             footerText='MC MODAL FOOTER'}}
 
   <p>Stuff</p>
+  <button {{ action 'disable' 'second' }}>Close</button>
 
 {{/mc-modal}}
 ```
