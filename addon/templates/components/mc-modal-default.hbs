@@ -1,0 +1,12 @@
+{{mc-modal-overlay displayable=displayable}}
+{{#mc-modal displayable=displayable}}
+  <div class='mc-modal__wrapper'>
+    {{mc-modal-header headerText=headerText}}
+
+    {{#mc-modal-content}}
+      {{ yield }}
+    {{/mc-modal-content}}
+
+    {{mc-modal-footer footerText=footerText}}
+  </div>
+{{/mc-modal}}

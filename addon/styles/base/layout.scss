@@ -1,0 +1,5 @@
+/* Need this to set up inherited percentage values for children elements */
+
+html, body {
+  min-height: 100%;
+}

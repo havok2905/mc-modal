@@ -1,0 +1,54 @@
+/*
+ * MC Modal Styles. Each component is represented by an element
+ * level BEM css selector. The exception is the mc-modal class
+ * which is represented by the block level selector.
+ */
+
+.mc-modal {
+  @extend %mc-modal-floating-component;
+
+  z-index: $mc-modal-z-index;
+}
+
+.mc-modal__overlay {
+  @extend %mc-modal-floating-component;
+
+  z-index:          $mc-modal-overlay-z-index;
+  background-color: $mc-modal-overlay-background-color;
+}
+
+.mc-modal__wrapper {
+  position:    relative;
+  top:         10vh;
+  width:       $mc-modal-width;
+  margin-left: ( 100% - $mc-modal-width ) / 2;
+  box-shadow:  0px 0px 20px #000000;
+}
+
+.mc-modal__header {
+  padding:                 $mc-modal-padding;
+  box-sizing:              border-box;
+  text-align:              center;
+  text-transform:          uppercase;
+  border-top-left-radius:  $mc-modal-border-radius;
+  border-top-right-radius: $mc-modal-border-radius;
+  color:                   $mc-modal-header-text-color;
+  background-color:        $mc-modal-header-background-color;
+}
+
+.mc-modal__footer {
+  padding:                    $mc-modal-padding;
+  box-sizing:                 border-box;
+  text-align:                 center;
+  border-bottom-left-radius:  $mc-modal-border-radius;
+  border-bottom-right-radius: $mc-modal-border-radius;
+  color:                      $mc-modal-footer-text-color;
+  background-color:           $mc-modal-footer-background-color;
+}
+
+.mc-modal__content {
+  padding:          $mc-modal-padding;
+  box-sizing:       border-box;
+  color:            $mc-modal-content-text-color;
+  background-color: $mc-modal-content-background-color;
+}
