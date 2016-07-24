@@ -5,13 +5,17 @@
  */
 
 .mc-modal {
+  @include diagonal-gradient(
+    $mc-modal-overlay-background-color-a,
+    $mc-modal-overlay-background-color-b
+  );
+
   z-index:          $mc-modal-z-index;
   position:         absolute;
   top:              0;
   left:             0;
   min-height:       100%;
   width:            100%;
-  background-color: $mc-modal-overlay-background-color;
 }
 
 .mc-modal__wrapper {
@@ -33,16 +37,12 @@
   background-color:        $mc-modal-header-background-color;
 
   i {
-    position:              absolute;
-    right:                 $mc-modal-padding;
-    top:                   $mc-modal-padding;
-    cursor:                pointer;
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select:   none; /* Chrome/Safari/Opera */
-    -khtml-user-select:    none; /* Konqueror */
-    -moz-user-select:      none; /* Firefox */
-    -ms-user-select:       none; /* Internet Explorer/Edge */
-    user-select:           none; /* Non-prefixed version, currently not supported by any browser */
+    @include no-select();
+    
+    position: absolute;
+    right:    $mc-modal-padding;
+    top:      $mc-modal-padding;
+    cursor:   pointer;
   }
 }
 

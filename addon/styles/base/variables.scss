@@ -9,15 +9,15 @@ $mc-modal-border-radius: 5px;
 $mc-modal-width: 90%;
 
 /* PADDING */
-$mc-modal-padding: 20px;
+$mc-modal-padding: 50px;
 
 /* BACKGROUND COLORS */
-$mc-modal-background-color:         rgba(255, 255, 255, 1);
-$mc-modal-overlay-background-color: rgba(0, 0, 0, 0.8);
-$mc-modal-content-background-color: rgba(255, 255, 255, 1);
-$mc-modal-header-background-color:  #151F28;
-$mc-modal-footer-background-color:  #FFFFFF;
-$mc-modal-shadow-color:             #000000;
+$mc-modal-overlay-background-color-a: rgba(11, 209, 239, 0.8);
+$mc-modal-overlay-background-color-b: rgba(31, 226, 109, 0.8);
+$mc-modal-content-background-color:   #FFFFFF;
+$mc-modal-header-background-color:    #151F28;
+$mc-modal-footer-background-color:    #FFFFFF;
+$mc-modal-shadow-color:               rgba(0, 0, 0, 0.8);
 
 /* FONT COLORS */
 $mc-modal-header-text-color:  #FFFFFF;

@@ -1,0 +1,8 @@
+@mixin diagonal-gradient($color_a, $color_b) {
+  background: $color_a;
+
+  background: -webkit-linear-gradient(left top,        $color_a, $color_b);
+  background:    -moz-linear-gradient(bottom right,    $color_a, $color_b);
+  background:      -o-linear-gradient(bottom right,    $color_a, $color_b);
+  background:         linear-gradient(to bottom right, $color_a, $color_b);
+}
