@@ -129,14 +129,14 @@ For white labeling and more common customization, the following variables can be
 - **$mc-modal-padding**: Pixels
 
 ##### Background Colors
-- **$mc-modal-background-color**: RGBA
-- **$mc-modal-overlay-background-color**: RGBA
-- **$mc-modal-content-background-color**: RGBA
-- **$mc-modal-header-background-color**: Hex
-- **$mc-modal-footer-background-color**: Hex
-- **$mc-modal-shadow-color**: Hex
+- **$mc-modal-overlay-background-color-a**: Color
+- **$mc-modal-overlay-background-color-b**: Color
+- **$mc-modal-content-background-color**: Color
+- **$mc-modal-header-background-color**: Color
+- **$mc-modal-footer-background-color**: Color
+- **$mc-modal-shadow-color**: Color
 
 ##### Font Colors
-- **$mc-modal-header-text-color**: Hex
-- **$mc-modal-content-text-color**: Hex
-- **$mc-modal-footer-text-color**: Hex
+- **$mc-modal-header-text-color**: Color
+- **$mc-modal-content-text-color**: Color
+- **$mc-modal-footer-text-color**: Color
