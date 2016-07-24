@@ -109,6 +109,7 @@ This component uses a BEM style naming convention for all selectors. The followi
 - .mc-modal__content: Container for your injected content
 - .mc-modal__header: Container for header text and exit button
 - .mc-modal__footer: Container for a blurb of text in the footer
+- .mc-modal__close-icon: Icon that triggers a change on the display toggle for a modal
 
 These selectors all have a specificity of 0010 and use no !importants.
 
