@@ -1,15 +1,17 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  displayable: false,
+  firstModalDisplayable:  true,
+  secondModalDisplayable: false,
+  thirdModalDisplayable:  false,
 
   actions: {
-    enable() {
-      this.set('displayable', true);
+    enable(id) {
+      this.set(`${id}ModalDisplayable`, true);
     },
 
-    disable() {
-      this.set('displayable', false);
+    disable(id) {
+      this.set(`${id}ModalDisplayable`, false);
     }
   }
 });

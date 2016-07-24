@@ -6,7 +6,7 @@ export default Ember.Component.extend({
 
   actions: {
     closeModal() {
-      this.set('displayable', false);
+      this.set(`displayable`, false);
     }
   }
 });
