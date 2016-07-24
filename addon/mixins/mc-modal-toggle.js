@@ -3,11 +3,11 @@ import Ember from 'ember';
 export default Ember.Mixin.create({
   actions: {
     enable(id) {
-      this.set(`${id}ModalDisplayable`, true);
+      this.set(id, true);
     },
 
     disable(id) {
-      this.set(`${id}ModalDisplayable`, false);
+      this.set(id, false);
     }
   }
 });

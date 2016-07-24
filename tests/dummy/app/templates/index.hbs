@@ -6,7 +6,7 @@
 <button {{ action 'enable' 'second'}}>Enable Second</button>
 <button {{ action 'enable' 'third'}}>Enable Third</button>
 
-{{#mc-modal displayable=firstModalDisplayable
+{{#mc-modal displayable=first
             closable=true
             headerText='FIRST MC MODAL HEADER'
             footerText='MC MODAL FOOTER'}}
@@ -55,7 +55,7 @@
   <button {{ action 'disable' 'first' }}>Close</button>
 {{/mc-modal}}
 
-{{#mc-modal displayable=secondModalDisplayable
+{{#mc-modal displayable=second
             closable=true
             headerText='SECOND MC MODAL HEADER'
             footerText='MC MODAL FOOTER'}}
@@ -104,7 +104,7 @@
   <button {{ action 'disable' 'second' }}>Close</button>
 {{/mc-modal}}
 
-{{#mc-modal displayable=thirdModalDisplayable
+{{#mc-modal displayable=third
             closable=true
             headerText='THIRD MC MODAL HEADER'
             footerText='MC MODAL FOOTER'}}

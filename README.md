@@ -27,8 +27,6 @@ For more information on using ember-cli, visit [http://ember-cli.com/](http://em
 
 ## Todos
 
-- Simplify the id based toggling because its annoying. Probably some meta programming magic can make this work.
-
 - Make the current theme not suck.
 
 - Write acceptance tests against multiple modals running simultaneously.
@@ -42,7 +40,7 @@ For more information on using ember-cli, visit [http://ember-cli.com/](http://em
 **./app/templates/index.hbs**
 
 ```hbs
-{{#mc-modal displayable=firstModalDisplayable
+{{#mc-modal displayable=true
             closable=true
             headerText='MC MODAL HEADER'
             footerText='MC MODAL FOOTER'}}
@@ -72,14 +70,14 @@ import Ember from 'ember';
 import McModalToggle from 'mc-modal/mixins/mc-modal-toggle';
 
 export default Ember.Controller.extend(McModalToggle, {
-  firstModalDisplayable:  false,
-  secondModalDisplayable: false
+  first:  false,
+  second: false
 });
 ```
 
 **./app/templates/index.hbs**
 ```hbs
-{{#mc-modal displayable=firstModalDisplayable
+{{#mc-modal displayable=first
             closable=true
             headerText='MC MODAL HEADER'
             footerText='MC MODAL FOOTER'}}
@@ -89,7 +87,7 @@ export default Ember.Controller.extend(McModalToggle, {
 
 {{/mc-modal}}
 
-{{#mc-modal displayable=secondModalDisplayable
+{{#mc-modal displayable=second
             closable=true
             headerText='MC MODAL HEADER'
             footerText='MC MODAL FOOTER'}}
