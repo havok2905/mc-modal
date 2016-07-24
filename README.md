@@ -27,8 +27,6 @@ For more information on using ember-cli, visit [http://ember-cli.com/](http://em
 
 ## Todos
 
-- Make the current theme not suck.
-
 - Write acceptance tests against multiple modals running simultaneously.
 
 - Test for backwards compatibility across older Ember versions.
