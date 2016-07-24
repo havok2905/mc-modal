@@ -1,5 +1,7 @@
 # Mc-modal
 
+A modal window addon built with white labeling, BEM style syntax, testability, and ease of implementation in mind.
+
 ## Installation
 
 * `git clone` this repository
@@ -108,7 +110,6 @@ For white labeling and more common customization, the following variables can be
 
 ##### Heights
 - **$mc-modal-z-index**: Number;
-- **$mc-modal-overlay-z-index**: Number;
 
 ##### Radius
 - **$mc-modal-border-radius**: Pixels;
