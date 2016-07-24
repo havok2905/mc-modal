@@ -1,12 +1,29 @@
 import Ember from 'ember';
-import McModalToggleMixin from 'mc-modal/mixins/mc-modal-toggle';
+import McModalToggle from 'mc-modal/mixins/mc-modal-toggle';
 import { module, test } from 'qunit';
 
 module('Unit | Mixin | mc modal toggle');
 
-// Replace this with your real tests.
-test('it works', function(assert) {
-  let McModalToggleObject = Ember.Object.extend(McModalToggleMixin);
-  let subject = McModalToggleObject.create();
-  assert.ok(subject);
+test('actions:enable should toggle a set <id>ModalDisplay property to true', function(assert) {
+  const controllerMock = Ember.Controller.extend(McModalToggle, {
+    fooModalDisplayable: false
+  });
+
+  const subject = controllerMock.create();
+
+  subject.send('enable', 'foo');
+
+  assert.ok(subject.get('fooModalDisplayable'));
+});
+
+test('actions:disable should toggle a set <id>ModalDisplay property to false', function(assert) {
+  const controllerMock = Ember.Controller.extend(McModalToggle, {
+    fooModalDisplayable: false
+  });
+
+  const subject = controllerMock.create();
+
+  subject.send('disable', 'foo');
+
+  assert.ok(!subject.get('fooModalDisplayable'));
 });
