@@ -1,23 +1,6 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
-
-const pageObject = {
-  headerText(context) {
-    return context.$('.mc-modal__header p').text().trim();
-  },
-
-  closeIcon(context) {
-    return context.$('.mc-modal__header i');
-  },
-
-  footerText(context) {
-    return context.$('.mc-modal__footer').text().trim();
-  },
-
-  content(context) {
-    return context.$('.mc-modal__content').text().trim();
-  }
-};
+import PageObject from '../../support/page-objects/mc-modal';
 
 moduleForComponent('mc-modal', 'Integration | Component | mc modal', {
   integration: true,
@@ -31,6 +14,8 @@ moduleForComponent('mc-modal', 'Integration | Component | mc modal', {
 });
 
 test('it renders and yields content when displayable and closable', function(assert) {
+  const pageObject = new PageObject(this);
+
   this.render(hbs`
     {{#mc-modal headerText=headerText
                 footerText=footerText
@@ -40,13 +25,15 @@ test('it renders and yields content when displayable and closable', function(ass
     {{/mc-modal}}
   `);
 
-  assert.equal(pageObject.headerText(this), 'Modal Header');
-  assert.equal(pageObject.closeIcon(this).length, 1);
-  assert.equal(pageObject.footerText(this), 'Footer Text');
-  assert.equal(pageObject.content(this), 'My Content');
+  assert.equal(pageObject.headerText(), 'Modal Header');
+  assert.equal(pageObject.closeIcon().length, 1);
+  assert.equal(pageObject.footerText(), 'Footer Text');
+  assert.equal(pageObject.content(), 'My Content');
 });
 
 test('it renders without a close button when not closable', function(assert) {
+  const pageObject = new PageObject(this);
+
   this.set('closable', false);
 
   this.render(hbs`
@@ -58,10 +45,12 @@ test('it renders without a close button when not closable', function(assert) {
     {{/mc-modal}}
   `);
 
-  assert.equal(pageObject.closeIcon(this).length, 0);
+  assert.equal(pageObject.closeIcon().length, 0);
 });
 
 test('it does not render when not displayable', function(assert) {
+  const pageObject = new PageObject(this);
+
   this.set('displayable', false);
 
   this.render(hbs`
@@ -73,13 +62,14 @@ test('it does not render when not displayable', function(assert) {
     {{/mc-modal}}
   `);
 
-  assert.equal(pageObject.headerText(this), '');
-  assert.equal(pageObject.closeIcon(this).length, 0);
-  assert.equal(pageObject.footerText(this), '');
-  assert.equal(pageObject.content(this), '');
+  assert.equal(pageObject.headerText(), '');
+  assert.equal(pageObject.closeIcon().length, 0);
+  assert.equal(pageObject.footerText(), '');
+  assert.equal(pageObject.content(), '');
 });
 
 test('it can be self closing', function(assert) {
+  const pageObject = new PageObject(this);
 
   this.render(hbs`
     {{#mc-modal headerText=headerText
@@ -90,15 +80,15 @@ test('it can be self closing', function(assert) {
     {{/mc-modal}}
   `);
 
-  assert.equal(pageObject.headerText(this), 'Modal Header');
-  assert.equal(pageObject.closeIcon(this).length, 1);
-  assert.equal(pageObject.footerText(this), 'Footer Text');
-  assert.equal(pageObject.content(this), 'My Content');
+  assert.equal(pageObject.headerText(), 'Modal Header');
+  assert.equal(pageObject.closeIcon().length, 1);
+  assert.equal(pageObject.footerText(), 'Footer Text');
+  assert.equal(pageObject.content(), 'My Content');
 
   pageObject.closeIcon(this).click();
 
-  assert.equal(pageObject.headerText(this), '');
-  assert.equal(pageObject.closeIcon(this).length, 0);
-  assert.equal(pageObject.footerText(this), '');
-  assert.equal(pageObject.content(this), '');
+  assert.equal(pageObject.headerText(), '');
+  assert.equal(pageObject.closeIcon().length, 0);
+  assert.equal(pageObject.footerText(), '');
+  assert.equal(pageObject.content(), '');
 });
