@@ -35,18 +35,18 @@
   border-top-right-radius: $mc-modal-border-radius;
   color:                   $mc-modal-header-text-color;
   background-color:        $mc-modal-header-background-color;
+}
 
-  svg {
-    @include no-select();
+.mc-modal__close-icon {
+  @include no-select();
 
-    width:    16px;
-    height:   16px;
-    position: absolute;
-    fill:     $mc-modal-header-text-color;
-    right:    $mc-modal-padding;
-    top:      $mc-modal-padding;
-    cursor:   pointer;
-  }
+  width:    16px;
+  height:   16px;
+  position: absolute;
+  fill:     $mc-modal-header-text-color;
+  right:    $mc-modal-padding;
+  top:      $mc-modal-padding;
+  cursor:   pointer;
 }
 
 .mc-modal__footer {
