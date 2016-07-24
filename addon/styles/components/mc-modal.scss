@@ -5,27 +5,24 @@
  */
 
 .mc-modal {
-  @extend %mc-modal-floating-component;
-
-  z-index: $mc-modal-z-index;
-}
-
-.mc-modal__overlay {
-  @extend %mc-modal-floating-component;
-
-  z-index:          $mc-modal-overlay-z-index;
+  z-index:          $mc-modal-z-index;
+  position:         absolute;
+  top:              0;
+  left:             0;
+  min-height:       100%;
+  width:            100%;
   background-color: $mc-modal-overlay-background-color;
 }
 
 .mc-modal__wrapper {
-  position:    relative;
-  top:         10vh;
+  margin:      5vh 0;
   width:       $mc-modal-width;
   margin-left: ( 100% - $mc-modal-width ) / 2;
-  box-shadow:  0px 0px 20px #000000;
+  box-shadow:  0px 0px 20px $mc-modal-shadow-color;
 }
 
 .mc-modal__header {
+  position:                relative;
   padding:                 $mc-modal-padding;
   box-sizing:              border-box;
   text-align:              center;
@@ -34,6 +31,19 @@
   border-top-right-radius: $mc-modal-border-radius;
   color:                   $mc-modal-header-text-color;
   background-color:        $mc-modal-header-background-color;
+
+  i {
+    position:              absolute;
+    right:                 $mc-modal-padding;
+    top:                   $mc-modal-padding;
+    cursor:                pointer;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select:   none; /* Chrome/Safari/Opera */
+    -khtml-user-select:    none; /* Konqueror */
+    -moz-user-select:      none; /* Firefox */
+    -ms-user-select:       none; /* Internet Explorer/Edge */
+    user-select:           none; /* Non-prefixed version, currently not supported by any browser */
+  }
 }
 
 .mc-modal__footer {

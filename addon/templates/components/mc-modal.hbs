@@ -1,3 +1,20 @@
 {{#if displayable}}
-  {{yield}}
+  <div class='mc-modal'>
+    <div class='mc-modal__wrapper'>
+      <div class='mc-modal__header'>
+        {{#if closable}}
+          <i {{ action 'closeModal' }}>X</i>
+        {{/if}}
+        <p><strong>{{ headerText }}</strong></p>
+      </div>
+
+      <div class='mc-modal__content'>
+        {{yield}}
+      </div>
+
+      <div class='mc-modal__footer'>
+        {{ footerText }}
+      </div>
+    </div>
+  </div>
 {{/if}}
