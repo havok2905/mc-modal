@@ -25,6 +25,16 @@ A modal window addon built with white labeling, BEM style syntax, testability, a
 
 For more information on using ember-cli, visit [http://ember-cli.com/](http://ember-cli.com/).
 
+## Todos
+
+- Simplify the id based toggling because its annoying. Probably some meta programming magic can make this work.
+
+- Make the current theme not suck.
+
+- Write acceptance tests against multiple modals running simultaneously.
+
+- Test for backwards compatibility across older Ember versions.
+
 ## Usage
 
 ### Ember Component
