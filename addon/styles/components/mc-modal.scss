@@ -36,10 +36,13 @@
   color:                   $mc-modal-header-text-color;
   background-color:        $mc-modal-header-background-color;
 
-  i {
+  svg {
     @include no-select();
-    
+
+    width:    16px;
+    height:   16px;
     position: absolute;
+    fill:     $mc-modal-header-text-color;
     right:    $mc-modal-padding;
     top:      $mc-modal-padding;
     cursor:   pointer;

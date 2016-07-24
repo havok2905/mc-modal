@@ -8,7 +8,7 @@ export default class PageObject {
   }
 
   closeIcon() {
-    return this.context.$('.mc-modal__header i');
+    return this.context.$('.mc-modal__header svg');
   }
 
   footerText() {
