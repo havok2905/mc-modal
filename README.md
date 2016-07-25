@@ -2,6 +2,14 @@
 
 A modal window addon built with white labeling, BEM style syntax, testability, and ease of implementation in mind.
 
+## Doc Generation
+
+This package uses jsdoc.
+
+`npm install jsdoc -g`
+
+`jsdoc ./addon/**/*.js`
+
 ## Installation
 
 * `git clone` this repository
