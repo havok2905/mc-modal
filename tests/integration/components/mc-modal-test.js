@@ -31,6 +31,48 @@ test('it renders and yields content when displayable and closable', function(ass
   assert.equal(pageObject.content(), 'My Content');
 });
 
+test('it renders without a header', function(assert) {
+  const pageObject = new PageObject(this);
+
+  this.set('headerText', null);
+
+  this.render(hbs`
+    {{#mc-modal headerText=headerText
+                footerText=footerText
+                displayable=displayable
+                closable=closable}}
+      <p>My Content</p>
+    {{/mc-modal}}
+  `);
+
+  assert.equal(pageObject.headerText(), '');
+  assert.equal(pageObject.closeIcon().length, 0);
+  assert.equal(pageObject.footerText(), 'Footer Text');
+  assert.equal(pageObject.content(), 'My Content');
+  assert.ok(pageObject.contentTopRounded());
+});
+
+test('it renders without a footer', function(assert) {
+  const pageObject = new PageObject(this);
+
+  this.set('footerText', null);
+
+  this.render(hbs`
+    {{#mc-modal headerText=headerText
+                footerText=footerText
+                displayable=displayable
+                closable=closable}}
+      <p>My Content</p>
+    {{/mc-modal}}
+  `);
+
+  assert.equal(pageObject.headerText(), 'Modal Header');
+  assert.equal(pageObject.closeIcon().length, 1);
+  assert.equal(pageObject.footerText(), '');
+  assert.equal(pageObject.content(), 'My Content');
+  assert.ok(pageObject.contentBottomRounded());
+});
+
 test('it renders without a close button when not closable', function(assert) {
   const pageObject = new PageObject(this);
 
