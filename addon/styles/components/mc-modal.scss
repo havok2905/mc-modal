@@ -10,12 +10,12 @@
     $mc-modal-overlay-background-color-b
   );
 
-  z-index:          $mc-modal-z-index;
-  position:         absolute;
-  top:              0;
-  left:             0;
-  min-height:       100%;
-  width:            100%;
+  z-index:    $mc-modal-z-index;
+  position:   absolute;
+  top:        0;
+  left:       0;
+  min-height: 100%;
+  width:      100%;
 }
 
 .mc-modal--top-rounded {
