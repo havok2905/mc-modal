@@ -16,6 +16,13 @@ This package uses jsdoc.
 * `npm install`
 * `bower install`
 
+## Successfull Ember Versions Tested Against
+
+- 1.13.13
+- 2.6.2
+- 2.7.0-beta.4
+- 2.7.0-canart+c63793d7
+
 ## Running
 
 * `ember server`
@@ -36,8 +43,6 @@ For more information on using ember-cli, visit [http://ember-cli.com/](http://em
 ## Todos
 
 - Write acceptance tests against multiple modals running simultaneously.
-
-- Test for backwards compatibility across older Ember versions.
 
 ## Usage
 
@@ -69,8 +74,8 @@ For more information on using ember-cli, visit [http://ember-cli.com/](http://em
 
 #### Available Computed Properties
 
--**contentNeedsTopRounding** <String> provides class to round corners in case of a missing header
--**contentNeedsBottomRounding** <String> provides class to round corners in case of a missing footer
+- **contentNeedsTopRounding** <String> provides class to round corners in case of a missing header
+- **contentNeedsBottomRounding** <String> provides class to round corners in case of a missing footer
 
 ### Removing The Header and Footer
 
