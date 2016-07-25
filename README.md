@@ -74,6 +74,8 @@ For more information on using ember-cli, visit [http://ember-cli.com/](http://em
 
 ### Removing The Header and Footer
 
+./app/templates/index.hbs
+
 ```hbs
 {{#mc-modal displayable=true
             closable=null
