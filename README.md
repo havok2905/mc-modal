@@ -59,6 +59,11 @@ For more information on using ember-cli, visit [http://ember-cli.com/](http://em
 
 - **closeModal** <Void> toggles the displayable property to false
 
+#### Available Computed Properties
+
+-**contentNeedsTopRounding** <String> provides class to round corners in case of a missing header
+-**contentNeedsBottomRounding** <String> provides class to round corners in case of a missing footer
+
 ### Handling Multiple Modals
 
 **./app/controllers/index.js**
