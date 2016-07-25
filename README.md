@@ -72,6 +72,19 @@ For more information on using ember-cli, visit [http://ember-cli.com/](http://em
 -**contentNeedsTopRounding** <String> provides class to round corners in case of a missing header
 -**contentNeedsBottomRounding** <String> provides class to round corners in case of a missing footer
 
+### Removing The Header and Footer
+
+```hbs
+{{#mc-modal displayable=true
+            closable=null
+            headerText=null
+            footerText=null}}
+
+  <p>Stuff</p>
+
+{{/mc-modal}}
+```
+
 ### Handling Multiple Modals
 
 **./app/controllers/index.js**
