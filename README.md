@@ -41,8 +41,8 @@ This package uses jsdoc.
 For more information on using ember-cli, visit [http://ember-cli.com/](http://ember-cli.com/).
 
 ## Todos
-
-- Write acceptance tests against multiple modals running simultaneously.
+- Manually test against many page types and site layouts
+- Manually test on mobile devices
 
 ## Usage
 
