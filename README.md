@@ -42,7 +42,6 @@ For more information on using ember-cli, visit [http://ember-cli.com/](http://em
 
 ## Todos
 - Manually test against many page types and site layouts
-- Manually test on mobile devices
 
 ## Usage
 
